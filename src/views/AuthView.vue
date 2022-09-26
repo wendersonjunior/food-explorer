@@ -7,8 +7,14 @@
         </v-col>
         <v-col cols="12" lg="6" class="d-flex justify-center">
           <div id="auth-form" class="backgroundcontrast">
-            <auth-login v-if="isLogin"></auth-login>
-            <auth-register v-else></auth-register>
+            <auth-login
+              v-if="isLogin"
+              @change-to-register="isLogin = false"
+            ></auth-login>
+            <auth-register
+              v-else
+              @change-to-login="isLogin = true"
+            ></auth-register>
           </div>
         </v-col>
       </v-row>
