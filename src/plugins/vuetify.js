@@ -10,6 +10,7 @@ import ForkKnifeIcon from "@/assets/icons/ForkKnifeIcon.vue";
 import MinusIcon from "@/assets/icons/MinusIcon.vue";
 import PlusIcon from "@/assets/icons/PlusIcon.vue";
 import ReceiptIcon from "@/assets/icons/ReceiptIcon.vue";
+import SignOutIcon from "@/assets/icons/SignOutIcon.vue";
 
 Vue.use(Vuetify);
 
@@ -41,6 +42,9 @@ export default new Vuetify({
       Receipt: {
         component: ReceiptIcon,
       },
+      SignOut: {
+        component: SignOutIcon,
+      },
     },
   },
   theme: {
@@ -53,7 +57,7 @@ export default new Vuetify({
         secondary: "#750310",
 
         // Backgrounds
-        background: "#1E1E1E",
+        background: "#000A0F",
         backgroundcontrast: "#00111A",
 
         // Status

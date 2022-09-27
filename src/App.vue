@@ -1,8 +1,6 @@
 <template>
   <v-app v-if="$route.name !== 'auth'">
-    <v-app-bar app color="backgroundcontrast" dark>
-      <span>Header</span>
-    </v-app-bar>
+    <app-header></app-header>
     <v-main class="background">
       <v-container>
         <v-row>
@@ -12,9 +10,7 @@
         </v-row>
       </v-container>
     </v-main>
-    <v-footer color="backgroundcontrast" class="py-7">
-      <span> Rodapé </span>
-    </v-footer>
+    <app-footer></app-footer>
   </v-app>
   <v-app v-else>
     <router-view />
@@ -22,8 +18,14 @@
 </template>
 
 <script>
+import AppHeader from "./components/AppHeader.vue";
+import AppFooter from "./components/AppFooter.vue";
 export default {
   name: "App",
+  components: {
+    AppHeader,
+    AppFooter,
+  },
   data: () => ({
     isAuth: false,
   }),
